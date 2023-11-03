@@ -1,4 +1,4 @@
-## SQA-2023 Semester Project - Team QA5710-FA2023-24
+## SQA-2023 Semester Project - Team 24
 Member
 * Alan Gaines
   * Bandit Git Hook - `git config core.hooksPath bandit_scanning`
