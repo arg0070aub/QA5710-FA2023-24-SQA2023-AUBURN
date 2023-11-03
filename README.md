@@ -1,3 +1,9 @@
+## SQA-2023 Semester Project - Team QA5710-FA2023-24
+Member
+* Alan Gaines
+  * Bandit Git Hook
+  * 
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
