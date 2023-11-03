@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	# Initial commit: diff against an empty tree object
+	against=$(git hash-object -t tree /dev/null)
+fi
+
+if [ ! -d "./bandit_scanning" ]
+then
+	mkdir "./bandit_scanning"
+fi
+bandit -r -f csv -o "./bandit_scanning/results.csv" .
+exit 0
