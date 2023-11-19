@@ -12,6 +12,7 @@ import numpy as np
 import json
 from sarif_om import *
 from jschema_to_python.to_json import to_json
+import logging_helper
 
 '''Global SarifLog Object definition and Rule definition for SLI-KUBE. Rule IDs are ordered by the sequence as it appears in the TOSEM paper'''
 
@@ -632,8 +633,11 @@ def scanDockerSock(path_script ):
     return dic  
 
 def runScanner(dir2scan):
+    logging = logging_helper.create_helper()
+    logging.info("Scanning  directory: {}".format(dir2scan))
     all_content   = [] 
     all_yml_files = getYAMLFiles(dir2scan)
+    logging.info("Found {} YAML files".format(len(all_yml_files)))
     val_cnt       = 0 
     for yml_ in all_yml_files:
         '''
@@ -645,6 +649,7 @@ def runScanner(dir2scan):
                 # print (" \n\n--------------- FILE RUNNING NOW---------------")
                 # print (yml_)
                 # print("---------------############################### ------\n\n\n")
+                logging.info("Scanning YAML: {}".format(yml_))
                 helm_flag             = parser.checkIfValidHelm(yml_)
                 k8s_flag              = parser.checkIfValidK8SYaml(yml_)
                 if (helm_flag):
@@ -726,9 +731,11 @@ def runScanner(dir2scan):
 
                 all_content.append( ( dir2scan, yml_, within_secret_, templ_secret_, valid_taint_secr, valid_taint_privi, http_dict, absentSecuContextDict, defaultNameSpaceDict, absentResourceDict, rollingUpdateDict, absentNetPolicyDic, pid_dic, ipc_dic, dockersock_dic, host_net_dic, cap_sys_dic, host_alias_dic, allow_privi_dic, unconfied_seccomp_dict, cap_module_dic, k8s_flag, helm_flag ) )
             else:
+                logging.info("Invalid YAML: {}".format(yml_))
                 print("Invalid YAML --> ",yml_)
                 invalid_yaml.append(yml_)
         else:
+            logging.info("Wierd YAML: {}".format(yml_))
             print(" Weird YAML --> ",yml_)
             weird_yaml.append(yml_)
 
