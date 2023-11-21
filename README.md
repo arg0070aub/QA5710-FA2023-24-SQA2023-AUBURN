@@ -2,6 +2,9 @@
 Member
 * Alan Gaines
   * Bandit Git Hook - `git config core.hooksPath bandit_scanning`
+  * Logging:
+    * scanner.py - runScanner
+    * scanner.py - scanForOverPrivelages
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
