@@ -746,7 +746,7 @@ def runScanner(dir2scan):
         sarif_json = to_json(sarif_log)
         #print(sarif_json)       
 
-
+    logging.info("Retained {} YAML file contents".format(len(all_content)))
     return all_content, sarif_json
 
 

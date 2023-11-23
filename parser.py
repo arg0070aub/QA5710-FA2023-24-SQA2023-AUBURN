@@ -14,6 +14,7 @@ import pathlib as pl
 import re
 import subprocess
 import os
+import logging_helper
 
 #update basepath
 base_path = r" "
@@ -140,6 +141,7 @@ def readYAMLAsStr( path_script ):
 
 # This function checks whether our parser throws an exception for reading the YAML file. 
 def checkParseError( path_script ):
+    logger = logging_helper.create_helper()
     flag = True
     with open(path_script, constants.FILE_READ_FLAG) as yml:
         yaml = ruamel.yaml.YAML()
@@ -148,17 +150,24 @@ def checkParseError( path_script ):
                 pass
         except ruamel.yaml.parser.ParserError as parse_error:
             flag = False
-            print(constants.YAML_SKIPPING_TEXT)           
+            print(constants.YAML_SKIPPING_TEXT)
+            logger.info("ParserError found, \"{}\" in file \"{}\"".format(str(parse_error), str(path_script)))
         except ruamel.yaml.error.YAMLError as exc:
             flag = False
-            print( constants.YAML_SKIPPING_TEXT  )    
+            print( constants.YAML_SKIPPING_TEXT  )
+            logger.info("YAMLError found, \"{}\" in file \"{}\"".format(str(exc), str(path_script)))
         except UnicodeDecodeError as err_: 
             flag = False
             print( constants.YAML_SKIPPING_TEXT  )
+            logger.info("UnicodeDecodeError found, \"{}\" in file \"{}\"".format(str(err_), str(path_script)))
+    if flag:
+        logger.info("No error found in file \"{}\"".format(str(path_script)))
     return flag
 
 def loadMultiYAML( script_ ):
-    dicts2ret = []  
+    dicts2ret = []
+    logger = logging_helper.create_helper()
+    logger.info("Loading file as MultiYAML: {}".format(str(script_)))
     with open(script_, constants.FILE_READ_FLAG  ) as yml_content :
         yaml = ruamel.yaml.YAML()
         yaml.default_flow_style = False      
@@ -166,6 +175,7 @@ def loadMultiYAML( script_ ):
             for d_ in yaml.load_all(yml_content) :                
                 # print('='*25)
                 # print(d_)
+                logger.info("Found dictionary: {}".format(d_))
                 dicts2ret.append( d_ )
         except ruamel.yaml.parser.ParserError as parse_error:
             print(constants.YAML_SKIPPING_TEXT)           
@@ -181,8 +191,10 @@ def loadMultiYAML( script_ ):
             # for debugging purposes
 
             path = find_json_path_keys(dicts2ret) #, key_jsonpath_mapping
+            logger.info("loadMultiYAML debugging: find json path keys: {}".format(str(path)))
             # print(path)
             updated_path = update_json_paths(path)
+            logger.info("loadMultiYAML debugging: update json paths: {}".format(str(updated_path)))
             # print(updated_path)
             # print("-------------------HERE IS THE MAPPING---------------")
             # for key in key_jsonpath_mapping:
@@ -196,6 +208,7 @@ def loadMultiYAML( script_ ):
             #     print(type(d))
                 
         #print(dicts2ret)
+    logger.info("Loading file as MultiYAML resulted in {} dictionaries".format(len(dicts2ret)))
     return dicts2ret
 
 
@@ -317,6 +330,9 @@ def show_line_for_paths(  filepath, key): #key_jsonpath_mapping is a global dict
     input: provide  JSON_PATH dictionary and the key
     output:  line of appearance of the key in the file
     """
+    logger = logging_helper.create_helper()
+    logger.info("Checking file \"{}\" with key \"{}\", line number {}".format(str(filepath), str(key), str(line_number)))
+
     env_PATH = r"C:\ProgramData\Chocolatey\bin"
     lines = []
     adjusted_lines = []
@@ -324,6 +340,7 @@ def show_line_for_paths(  filepath, key): #key_jsonpath_mapping is a global dict
     # for k in key_jsonpath_mapping:
     #     print("Key--->",k, "Value--->",key_jsonpath_mapping[k])
     if key_jsonpath_mapping.get(key) is not None:
+        logger.info("Found mapping for key {}: {}".format(str(key), str(key_jsonpath_mapping[key])))
         if isinstance(key_jsonpath_mapping[key], list):
             for i in key_jsonpath_mapping[key]:
                 #print(i)

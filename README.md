@@ -5,6 +5,9 @@ Member
   * Logging:
     * scanner.py - runScanner
     * scanner.py - scanForOverPrivelages
+    * parser.py - checkParseError
+    * parser.py - loadMultiYAML
+    * parser.py - show_line_for_paths
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
