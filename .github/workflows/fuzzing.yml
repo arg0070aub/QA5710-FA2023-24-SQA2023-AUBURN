@@ -3,12 +3,11 @@ name: Fuzz methods
 on:
   push:
     branches: [ master ]
-  pull-request:
+  pull_request:
     branches: [ master ]
 
 jobs:
-  build:
-
+  Fuzz:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,6 +32,6 @@ jobs:
         pip install ruamel.yaml
         pip install pathlib
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run integration and taint-related tests 
+    - name: Fuzz methods in project
       run: |
         python fuzz.py  
