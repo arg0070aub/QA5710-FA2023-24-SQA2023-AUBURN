@@ -3,6 +3,8 @@ name: Fuzz methods
 on:
   push:
     branches: [ master ]
+  pull-request:
+    branches: [ master ]
 
 jobs:
   build:
