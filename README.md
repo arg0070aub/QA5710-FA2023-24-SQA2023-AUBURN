@@ -8,6 +8,8 @@ Member
     * parser.py - checkParseError
     * parser.py - loadMultiYAML
     * parser.py - show_line_for_paths
+  * Fuzzing:
+    * GitHub actions to run fuzz.py
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
