@@ -2,7 +2,7 @@ name: Fuzz methods
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
