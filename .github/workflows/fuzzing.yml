@@ -3,9 +3,8 @@ name: Fuzz methods
 on:
   push:
     branches: [ master ]
-  commit:
-    branches: [ master ]
   pull_request:
+    types: [ closed ]
     branches: [ master ]
   workflow_dispatch:
 
