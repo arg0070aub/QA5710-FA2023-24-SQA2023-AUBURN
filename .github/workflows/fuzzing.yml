@@ -3,6 +3,8 @@ name: Fuzz methods
 on:
   push:
     branches: [ master ]
+  commit:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
   workflow_dispatch:
@@ -32,6 +34,7 @@ jobs:
         pip install PyYAML
         pip install ruamel.yaml
         pip install pathlib
+        pip install sarif_om
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Fuzz methods in project
       run: |
