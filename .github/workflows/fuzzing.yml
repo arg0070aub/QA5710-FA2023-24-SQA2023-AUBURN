@@ -31,6 +31,7 @@ jobs:
         pip install ruamel.yaml
         pip install pathlib
         pip install sarif_om
+        pip install jschema_to_python
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Fuzz methods in project
       run: |
