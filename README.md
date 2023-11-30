@@ -3,6 +3,10 @@ Member
 * Alan Gaines
 
 See [REPO.md](REPO.md) for tasks and lessons learned
+See [bandit_scanning](bandit_scanning) for deliverables:
+* [Static analysis](bandit_scanning/results.csv) 
+* [Logging](bandit_scanning/2023-11-09.log)
+* [Fuzzing](bandit_scanning/fuzzing_screenshot.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
