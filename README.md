@@ -1,20 +1,8 @@
 ## SQA-2023 Semester Project - Team 24
 Member
 * Alan Gaines
-  * Bandit Git Hook - `git config core.hooksPath bandit_scanning`
-  * Logging:
-    * scanner.py - runScanner
-    * scanner.py - scanForOverPrivelages
-    * parser.py - checkParseError
-    * parser.py - loadMultiYAML
-    * parser.py - show_line_for_paths
-  * Fuzzing:
-    * GitHub actions to run fuzz.py
-    * parser.py - getKeyRecursively - no type checking or enforcement beyond input dictionary
-    * parser.py - update_json_paths - no type checking for input or on data contained within the input if it is an iterable container
-    * parser.py - getSingleDict4MultiDocs - just a lack of checking for whether the input is iterable that I could find
-    * scanner.py - getYAMLFiles - doesn't handle if input isn't a valid directory path
-    * scanner.py - getItemFromSecret - no type checking of inputs or contents thereof, doesn't ensure position is within range
+
+See [REPO.md](REPO.md) for tasks and lessons learned
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
