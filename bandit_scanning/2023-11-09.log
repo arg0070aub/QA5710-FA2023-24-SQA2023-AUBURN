@@ -1,0 +1,93 @@
+2023-11-29 19:27:23,703 Scanning  directory: .
+2023-11-29 19:27:23,721 Found 78 YAML files
+2023-11-29 19:27:23,722 Loading file as MultiYAML: .\environment.yml
+2023-11-29 19:27:23,736 Found dictionary: {'name': 'KUBESEC', 'channels': ['defaults'], 'dependencies': ['python=3.11', 'pandas=2.0.2', 'pyyaml=6.0', 'pytest=7.3.1', 'requests=2.29.0', 'typer=0.9.0']}
+2023-11-29 19:27:23,739 No error found in file ".\environment.yml"
+2023-11-29 19:27:23,739 loadMultiYAML debugging: find json path keys: ['', '.name', '.channels', '.channels[0]', '.dependencies', '.dependencies[0]', '.dependencies[1]', '.dependencies[2]', '.dependencies[3]', '.dependencies[4]', '.dependencies[5]']
+2023-11-29 19:27:23,739 loadMultiYAML debugging: update json paths: ['.name', '.channels', '.channels[0]', '.dependencies', '.dependencies[0]', '.dependencies[1]', '.dependencies[2]', '.dependencies[3]', '.dependencies[4]', '.dependencies[5]']
+2023-11-29 19:27:23,740 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,740 Invalid YAML: .\environment.yml
+2023-11-29 19:27:23,753 Loading file as MultiYAML: .\.github\workflows\fuzzing.yml
+2023-11-29 19:27:23,756 Found dictionary: {'name': 'Fuzz methods', 'on': {'push': {'branches': ['main']}, 'workflow_dispatch': None}, 'jobs': {'Fuzz': {'runs-on': 'ubuntu-latest', 'steps': [{'uses': 'actions/checkout@v2'}, {'name': 'Set up Python 3.11', 'uses': 'actions/setup-python@v2', 'with': {'python-version': 3.11}}, {'name': 'Install Python Dependencies', 'run': '# conda env create -f environment.yml\n# conda activate slikube-enhancement        \npython -m pip install --upgrade pip\npip install numpy\npip install flake8 pytest\npip install requests\npip install pandas\npip install PyYAML\npip install ruamel.yaml\npip install pathlib\npip install sarif_om\npip install jschema_to_python\n# if [ -f requirements.txt ]; then pip install -r requirements.txt; fi\n'}, {'name': 'Fuzz methods in project', 'run': 'python fuzz.py  \n'}]}}}
+2023-11-29 19:27:23,774 No error found in file ".\.github\workflows\fuzzing.yml"
+2023-11-29 19:27:23,774 loadMultiYAML debugging: find json path keys: ['', '.name', '.on', '.on.push', '.on.push.branches', '.on.push.branches[0]', '.on.workflow_dispatch', '.jobs', '.jobs.Fuzz', '.jobs.Fuzz.runs-on', '.jobs.Fuzz.steps', '.jobs.Fuzz.steps[0]', '.jobs.Fuzz.steps[0].uses', '.jobs.Fuzz.steps[1]', '.jobs.Fuzz.steps[1].name', '.jobs.Fuzz.steps[1].uses', '.jobs.Fuzz.steps[1].with', '.jobs.Fuzz.steps[1].with.python-version', '.jobs.Fuzz.steps[2]', '.jobs.Fuzz.steps[2].name', '.jobs.Fuzz.steps[2].run', '.jobs.Fuzz.steps[3]', '.jobs.Fuzz.steps[3].name', '.jobs.Fuzz.steps[3].run']
+2023-11-29 19:27:23,774 loadMultiYAML debugging: update json paths: ['.name', '.on', '.on.push', '.on.push.branches', '.on.push.branches[0]', '.on.workflow_dispatch', '.jobs', '.jobs.Fuzz', '.jobs.Fuzz.runs-on', '.jobs.Fuzz.steps', '.jobs.Fuzz.steps[0]', '.jobs.Fuzz.steps[0].uses', '.jobs.Fuzz.steps[1]', '.jobs.Fuzz.steps[1].name', '.jobs.Fuzz.steps[1].uses', '.jobs.Fuzz.steps[1].with', '.jobs.Fuzz.steps[1].with.python-version', '.jobs.Fuzz.steps[2]', '.jobs.Fuzz.steps[2].name', '.jobs.Fuzz.steps[2].run', '.jobs.Fuzz.steps[3]', '.jobs.Fuzz.steps[3].name', '.jobs.Fuzz.steps[3].run']
+2023-11-29 19:27:23,774 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,774 Invalid YAML: .\.github\workflows\fuzzing.yml
+2023-11-29 19:27:23,789 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,805 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,805 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,805 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,805 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,805 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,805 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,805 Scanning YAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,805 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,805 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,805 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,805 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,805 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,805 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,805 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,817 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,818 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,818 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,818 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,818 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,819 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,820 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,821 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,821 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,821 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,821 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,822 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,823 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,824 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,824 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,824 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,824 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,824 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,824 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,824 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,824 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,824 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,824 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,824 Found 0 over-privelaged keys
+2023-11-29 19:27:23,824 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,824 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,835 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,835 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,835 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,835 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,835 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,837 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,838 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,838 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,838 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,838 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,838 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,838 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,838 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,838 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,838 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,838 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,838 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,838 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,838 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,838 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,838 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,838 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,838 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,838 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,852 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,853 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,853 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,853 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,853 Loading file as MultiYAML: .\TEST_ARTIFACTS\absent.default1.yaml
+2023-11-29 19:27:23,855 Found dictionary: {'apiVersion': 'v1', 'kind': 'ServiceAccount', 'metadata': {'name': 'varnish-ingress', 'namespace': 'default'}}
+2023-11-29 19:27:23,856 No error found in file ".\TEST_ARTIFACTS\absent.default1.yaml"
+2023-11-29 19:27:23,857 loadMultiYAML debugging: find json path keys: ['', '.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,857 loadMultiYAML debugging: update json paths: ['.apiVersion', '.kind', '.metadata', '.metadata.name', '.metadata.namespace']
+2023-11-29 19:27:23,857 Loading file as MultiYAML resulted in 1 dictionaries
+2023-11-29 19:27:23,857 Checking file ".\TEST_ARTIFACTS\absent.default1.yaml" with key "namespace", line number 0
+2023-11-29 19:27:23,857 Found mapping for key namespace: .metadata.namespace
